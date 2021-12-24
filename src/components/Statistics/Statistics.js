@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StatItem } from './Statistics.styled';
+import { ListItem } from './Statistics.styled';
 
 const Statistics = ({ data }) => {
   return (
-    <ul>
+    <ListItem>
       {Object.keys(data).map(item => (
         <StatItem key={item}>
           {item}: {data[item]}
         </StatItem>
       ))}
-    </ul>
+    </ListItem>
   );
 };
 
